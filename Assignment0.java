@@ -13,12 +13,9 @@ public class Assignment0 extends TestCase{
 
 	public void testMultiplication() {
 		Dollar five= new Dollar(5);
-		Dollar product= five.times(2);
-		assertEquals(10, product.amount);
-		product= five.times(3);
-		assertEquals(15, product.amount);
+		assertEquals(new Dollar(10), five.times(2));
+		assertEquals(new Dollar(15), five.times(3));
 	}
-
 	public void testEquality() {
 		assertTrue(new Dollar(5).equals(new Dollar(5)));
 		assertFalse(new Dollar(5).equals(new Dollar(6)));
@@ -41,21 +38,4 @@ public class Assignment0 extends TestCase{
 	}
 
 
-	class Dollar {
-		int amount;
-
-		Dollar(int amount) {
-			this.amount= amount;
-		}
-
-		Dollar times(int multiplier) {
-			return new Dollar(amount * multiplier);
-		}
-
-		public boolean equals(Object object) {
-			Dollar dollar= (Dollar) object;
-			return amount == dollar.amount;
-		}
-
-	}
 }
