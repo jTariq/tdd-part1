@@ -9,7 +9,7 @@ import org.junit.BeforeClass;
 
 public class Assignment0 extends TestCase{
 
-	
+
 
 	public void testMultiplication() {
 		Dollar five= new Dollar(5);
@@ -18,9 +18,10 @@ public class Assignment0 extends TestCase{
 		product= five.times(3);
 		assertEquals(15, product.amount);
 	}
-	
+
 	public void testEquality() {
 		assertTrue(new Dollar(5).equals(new Dollar(5)));
+		assertFalse(new Dollar(5).equals(new Dollar(6)));
 	}
 
 	@BeforeClass
@@ -54,7 +55,7 @@ public class Assignment0 extends TestCase{
 		public boolean equals(Object object) {
 			Dollar dollar= (Dollar) object;
 			return amount == dollar.amount;
-			}
+		}
 
 	}
 }
