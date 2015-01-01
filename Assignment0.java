@@ -1,22 +1,23 @@
 
-import junit.framework.TestCase;
+import static org.junit.Assert.*;
 
+import org.junit.Assert.*;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Test;
 
 
-public class Assignment0 extends TestCase{
+public class Assignment0 {
 
 
-
-	public void testMultiplication() {
+	@Test public void testMultiplication() {
 		Dollar five= new Dollar(5);
 		assertEquals(new Dollar(10), five.times(2));
 		assertEquals(new Dollar(15), five.times(3));
 	}
-	public void testEquality() {
+	@Test public void testEquality() {
 		assertTrue(new Dollar(5).equals(new Dollar(5)));
 		assertFalse(new Dollar(5).equals(new Dollar(6)));
 	}
